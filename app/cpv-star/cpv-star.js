@@ -5,19 +5,21 @@
 
 	app.component('cpvStar', {
 		bindings: {
-			n: '<?note'
+			n: '=?note'
 		},
 		controller: function CpvStarCtrl($scope, $element, $compile) {
 			// Surtout pas $element !
-            console.log('CpvStarCtrl', arguments);
-            const $ctrl = this;
+			console.log('CpvStarCtrl', arguments);
+			const $ctrl = this;
 			$scope.update = function(newNote) {
 				console.log('update', arguments);
-				$scope.n = newNote;
+				$ctrl.n = newNote;
 			};
 			$scope.$watch('$ctrl.n', function() {
 				let html = '';
 				let note = $ctrl.n || 3;
+				note = (note > 5) ? 5 : note;
+				note = (note < 0) ? 0 : note;
 				for (let i = 0; i < note; i++) {
 					html += '<img ng-click="update(' + (i + 1) + ')" src="cpv-star/img/yellow_star.png">';
 				}
