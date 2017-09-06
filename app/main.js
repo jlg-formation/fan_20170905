@@ -1,9 +1,9 @@
-(function () {
-    'use strict';
+(function() {
+	'use strict';
 
-    const app = angular.module('main', []);
+	const app = angular.module('main', []);
 
-    app.run(function ($rootScope) {
-        $rootScope.name = 'Vive COKO & DONQI'
-    });
+	app.run(function($rootScope) {
+		$rootScope.name = 'LaCipav';
+	});
 })();
