@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	const app = angular.module('main', []);
+	const app = angular.module('main', ['cpv-star']);
 
 	app.run(function($rootScope) {
 		$rootScope.name = 'LaCipav';
