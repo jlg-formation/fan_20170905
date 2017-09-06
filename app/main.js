@@ -1,3 +1,8 @@
+import 'angular/angular-csp.css';
+import './style.css';
+import 'angular';
+import './cpv-star/cpv-star.js';
+
 const app = angular.module('main', ['cpv-star']);
 
 app.run(function($rootScope) {
