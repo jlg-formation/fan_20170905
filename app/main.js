@@ -13,5 +13,19 @@
 			templateUrl: 'tmpl/cpv-header.html'
 		};
     });
+
+    app.directive('cpvBody', function () {
+		return {
+			restrict: 'E',
+			templateUrl: 'tmpl/cpv-body.html'
+		};
+    });
+
+    app.directive('cpvFooter', function () {
+		return {
+			restrict: 'E',
+			templateUrl: 'tmpl/cpv-footer.html'
+		};
+    });
     
   })();
