@@ -7,7 +7,7 @@
 		return {
 			restrict: 'E',
 			scope: {
-				n: '=?note'
+				n: '<?note'
 			},
 			controller: function CpvStarCtrl($scope, $element, $compile) {
 				// Surtout pas $element !
