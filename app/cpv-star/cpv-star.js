@@ -5,8 +5,11 @@
 
     app.directive('cpvStar', function () {
 		return {
-			restrict: 'E',
-			templateUrl: 'cpv-star/tmpl/cpv-star.html'
+            restrict: 'E',
+            controller: function CpvStarCtrl($scope, $element, $attrs, $transclude) {
+                console.log('CpvStarCtrl', arguments);
+                $element.html('<b>Mr. Sarr</b>');
+            }
 		};
     });
     
