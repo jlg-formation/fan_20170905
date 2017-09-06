@@ -7,9 +7,10 @@
 		return {
 			restrict: 'E',
 			controller: function CpvStarCtrl($scope, $element, $attrs, $transclude) {
+                // Surtout pas $element !
 				console.log('CpvStarCtrl', arguments);
                 let html = '';
-                let note = 3;
+                let note = $attrs.note || 3;
 				for (let i = 0; i < note; i++) {
 					html += '<img src="cpv-star/img/yellow_star.png">';
                 }
