@@ -4,6 +4,6 @@
     const app = angular.module('main', []);
 
     app.run(function ($rootScope) {
-        $rootScope.name = 'Jérémie'
+        $rootScope.name = 'Vive COKO & DONQI'
     });
 })();
