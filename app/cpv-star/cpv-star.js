@@ -9,7 +9,7 @@
 		},
 		controller: function CpvStarCtrl($scope, $element, $compile) {
 			// Surtout pas $element !
-			console.log('CpvStarCtrl', arguments);
+			console.log('CpvStarCtrl xxx', arguments);
 			const $ctrl = this;
 			$scope.update = function(newNote) {
 				console.log('update', arguments);
