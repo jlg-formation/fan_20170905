@@ -1,31 +1,26 @@
-(function() {
-	'use strict';
+const app = angular.module('main', ['cpv-star']);
 
-	const app = angular.module('main', ['cpv-star']);
+app.run(function($rootScope) {
+	$rootScope.name = 'LaCipav';
+});
 
-	app.run(function($rootScope) {
-		$rootScope.name = 'LaCipav';
-    });
-    
-    app.directive('cpvHeader', function () {
-		return {
-			restrict: 'E',
-			templateUrl: 'tmpl/cpv-header.html'
-		};
-    });
+app.directive('cpvHeader', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'tmpl/cpv-header.html'
+	};
+});
 
-    app.directive('cpvBody', function () {
-		return {
-			restrict: 'E',
-			templateUrl: 'tmpl/cpv-body.html'
-		};
-    });
+app.directive('cpvBody', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'tmpl/cpv-body.html'
+	};
+});
 
-    app.directive('cpvFooter', function () {
-		return {
-			restrict: 'E',
-			templateUrl: 'tmpl/cpv-footer.html'
-		};
-    });
-    
-  })();
+app.directive('cpvFooter', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'tmpl/cpv-footer.html'
+	};
+});
